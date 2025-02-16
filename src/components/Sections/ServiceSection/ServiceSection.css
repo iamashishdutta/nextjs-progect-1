@@ -1,0 +1,76 @@
+#ServiceSection {
+    @apply flex flex-col justify-center items-center gap-4  w-full
+}
+#service-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    @apply  gap-4 w-full place-items-center
+}
+#service-cards .card {
+    background-repeat: no-repeat;
+    background-position: center 70%;
+    @apply w-[338px] h-[292px] 
+    gap-4 rounded-2xl relative
+    flex flex-col justify-end items-center p-12
+}
+#service-cards .card-body {
+    @apply w-full h-full flex flex-col justify-start items-center gap-4
+}
+#service-cards .card-title {
+    @apply text-[#C5CDE3] text-sm font-semibold
+}
+#service-cards .card-text {
+    @apply text-[#C5CDE3] text-xs font-light text-center
+}
+#service-cards .card::after{
+    background-image: url(./bg/pin.svg), url(./bg/pin.svg);
+ 
+     content: ' ';
+     background-position: top left, top right;
+     background-repeat: no-repeat;
+     background-size: contain;
+     
+     @apply absolute w-full h-full top-0 left-0
+
+ }#service-cards .card::before{
+    background-image: url(./bg/line.svg), url(./bg/line.svg);
+ 
+     content: ' ';
+     background-position: top left, bottom right;
+     background-repeat: no-repeat;
+     background-size: contain;
+     transform: rotate(180deg);
+     
+     @apply absolute w-full h-full top-0 left-0
+ }
+
+
+#service-cards .card:nth-of-type(1) {
+    background-image: url(./bg/card1.svg);
+}
+
+#service-cards .card:nth-of-type(2) {
+    background-image: url(./bg/card2.svg);
+}
+
+#service-cards .card:nth-of-type(3) {
+    background-image: url(./bg/card3.svg);
+}
+#service-cards .card:nth-of-type(4) {
+    background-image: url(./bg/card4.svg);
+}
+#service-cards .card:nth-of-type(5) {
+    background-image: url(./bg/card5.svg);
+}
+#service-cards .card:nth-of-type(6) {
+    background-image: url(./bg/card6.svg);
+}
+
+@media screen and (max-width: 1280px) {
+    #service-cards {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+    
+}

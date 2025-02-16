@@ -1,0 +1,54 @@
+#reach-card {
+    width: 352px;
+    height: 592px;
+    background-image: url(./reach.svg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    grid-row: 1 / span 1;
+    @apply rounded-2xl  relative justify-end px-8 py-16 overflow-hidden
+}
+#reach-card-body {
+    @apply flex flex-col justify-center items-start gap-2 text-start
+    
+}
+
+#reach-card-title {
+    @apply text-[#C5CDE3] text-sm font-semibold
+}
+#reach-card-text {
+    @apply text-[#C5CDE3] text-xs font-light
+}
+
+#redar {
+    background-image: url(./redar/img1.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    top: -10%;
+    animation: redardBgChange 1.5s linear infinite;
+    @apply flex justify-center items-center w-full h-full absolute
+    left-0 
+}
+
+@keyframes redardBgChange {
+    0% {
+        background-image: url(./redar/img1.svg);
+    }
+    25% {
+        background-image: url(./redar/img2.svg);
+    }
+    50% {
+        background-image: url(./redar/img3.svg);
+    }
+    75% {
+        background-image: url(./redar/img4.svg);
+    }
+    95% {
+        background-image: url(./redar/img5.svg);
+    }
+    100% {
+        background-image: url(./redar/img1.svg);
+    }
+}
+

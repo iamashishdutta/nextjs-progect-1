@@ -1,0 +1,40 @@
+#TrialButton {
+    @apply flex flex-col justify-center items-center gap-5 relative
+}
+
+#TrialButton a {
+    
+    background-image: url(./stars.png), url(./stars.png);
+    @apply relative flex justify-center items-center 
+    border border-[#FFFFFF1A] h-12 w-48 rounded-2xl bg-[#7687B54A] text-base
+}
+
+#TrialButton a::after {
+    content: ' ';
+    background-image: url(./login-circle.png);
+    background-size: cover;
+
+    @apply absolute w-full h-4/6 bottom-0 left-0
+    
+}   
+#TrialButton a {
+    animation: starsAnimation 400ms linear infinite ;
+}
+#TrialButton a:hover {
+    box-shadow: 0 0 40px #FFFFFF1A, 0 0 40px #FFFFFF1A;
+}
+#TrialButton span {
+    @apply text-[#C5CDE3] text-xs
+}
+
+@keyframes starsAnimation {
+    
+    0% {
+        background-position: 0 0;
+        background-size: 100%;
+    }
+    100% {
+        background-position: 0% 100%;
+        background-size: 100%;
+    }
+}

@@ -1,0 +1,42 @@
+#SButtons-container {
+    @apply flex justify-center items-center gap-3 h-36;
+}
+
+button.SButton {
+    position: relative;
+    overflow: hidden;
+    background: #78819936;
+    border-right: 5px solid #7687B5; /* Ensure border size */
+    
+    
+    @apply flex justify-center items-center gap-2 w-28 h-28 border-r-2 rounded-xl  z-10;
+}
+
+#SButtons-container .icon-container {
+    @apply text-[#C5CDE3] text-xs z-10
+}
+.SButton-container span.SButton-text {
+    @apply text-[#C5CDE3] text-base z-10 text-center w-full opacity-0
+}
+.SButton-container  {
+    @apply flex flex-col justify-center items-center gap-2
+}
+.SButton-container:hover {
+    @apply -translate-y-10
+
+}
+.SButton-container:hover span.SButton-text {
+    
+    @apply opacity-100
+}
+/* Border Animation */
+@keyframes moveBorder {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+
+* {
+    transition: all 0.3s ease-in-out;
+}

@@ -1,0 +1,14 @@
+#hero-section {
+    @apply flex flex-col 
+    w-[82vw] min-h-[38rem] 
+    pt-4 justify-evenly items-center;
+}
+#hero-section::before {
+    content: ' ';
+    background-image: url(./triangle.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    @apply absolute top-0 left-0 w-full h-full -z-10
+}
+

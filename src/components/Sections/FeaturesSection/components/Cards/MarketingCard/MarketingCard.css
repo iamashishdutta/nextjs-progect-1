@@ -1,0 +1,38 @@
+#marketing-card{
+    width: 352px;
+    height: 280px;
+    background-image: url(./bg/bg.svg);
+    background-size: cover;
+    display: grid;
+    grid-template-rows: 1fr 20%;
+    grid-template-columns: 1fr;
+    animation: mCardBgChange 1s linear infinite;
+    @apply rounded-2xl  relative justify-end px-8 py-16 overflow-hidden
+}
+
+#marketing-card-body{
+    @apply flex flex-col justify-center items-start gap-2 text-start
+}
+
+#marketing-card-title{
+    @apply text-[#C5CDE3] text-sm font-semibold
+}
+#marketing-card-text{
+    @apply text-[#C5CDE3] text-xs font-light
+}
+
+@keyframes mCardBgChange {
+    0% {
+        background-image: url(./bg/bg.svg);
+    }
+    25% {
+        background-image: url(./bg/bg1.svg);
+    }
+    50% {
+        background-image: url(./bg/bg2.svg);
+    }
+
+    100% {
+        background-image: url(./bg/bg.svg);
+    }
+}

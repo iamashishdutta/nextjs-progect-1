@@ -1,0 +1,56 @@
+#TestinomialsSection {
+
+    @apply flex flex-col justify-center items-center gap-24 w-full min-h-28 relative
+}
+
+#TestinomialsSection::before {
+    content: " ";
+    background-image: url(./circle.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top;
+    top: -20%;
+    position: absolute;
+    height: 109%;
+    width: 100%;
+    @apply -z-10
+}
+
+
+.Testinomials-card {
+    /* background: rgb(11, 11, 11); */
+    width: 352px;
+    height: 196px;
+    
+    position: relative;
+    padding: 20px;
+    border-radius: 12px; /* Ensures rounded corners */
+    background: linear-gradient( rgb(11, 11, 11),  rgb(11, 11, 11)) padding-box,
+                linear-gradient(45deg, #7687B5, #333B4F) border-box;
+    border: 1px solid transparent;
+    padding: 20px;
+    
+    @apply flex flex-col justify-center items-center gap-4  relative
+     text-start p-8 
+}
+.Testinomials-card-text {
+    @apply text-[#C5CDE3] text-sm font-semibold
+}
+.Testinomials-card-name {
+    @apply text-[#FFFF] text-sm font-light
+}
+#Testinomials-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    @apply w-9/12 h-full justify-center items-center  place-items-center gap-4
+}
+
+
+@media screen and (max-width: 1280px) {
+    #TestinomialsText {
+        @apply text-[1.2rem]
+    }
+    #Testinomials-cards {
+        @apply grid-cols-1 gap-5
+    }   
+}

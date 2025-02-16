@@ -1,0 +1,38 @@
+#insights-card{
+    width: 352px;
+    height: 280px;
+    background-image: url(./bg/bg.svg);
+    background-size: cover;
+    display: grid;
+    grid-template-rows: 1fr 20%;
+    grid-template-columns: 1fr;
+    animation: insightsCardBgChange 1s linear infinite;
+    @apply rounded-2xl  relative justify-end px-8 py-16 overflow-hidden
+}
+
+#insights-card-body{
+    @apply flex flex-col justify-center items-start gap-2 text-start
+}
+
+#insights-card-title{
+    @apply text-[#C5CDE3] text-sm font-semibold
+}
+#insights-card-text{
+    @apply text-[#C5CDE3] text-xs font-light
+}
+
+@keyframes insightsCardBgChange {
+    0% {
+        background-image: url(./bg/bg.svg);
+    }
+    25% {
+        background-image: url(./bg/bg1.svg);
+    }
+    50% {
+        background-image: url(./bg/bg2.svg);
+    }
+
+    100% {
+        background-image: url(./bg/bg.svg);
+    }
+}

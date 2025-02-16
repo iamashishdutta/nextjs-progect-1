@@ -1,0 +1,35 @@
+#FeaturesSection {
+
+    @apply flex flex-col justify-center items-center gap-24 w-full min-h-28 relative
+}
+
+#FeaturesSection::before {
+    content: " ";
+    background-image: url(./circle.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top ;
+    top: 10%;
+    position: absolute;
+    height: 109%;
+    width: 100%;
+    @apply -z-10
+}
+
+
+
+#features-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    @apply w-9/12 h-full justify-center items-center  place-items-center
+
+}
+@media screen and (max-width: 1280px) {
+    #FeaturesText {
+        @apply text-[1.2rem]
+    }
+    #features-cards {
+        @apply grid-cols-1 gap-5
+    }
+}
+

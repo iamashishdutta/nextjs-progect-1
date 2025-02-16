@@ -1,0 +1,31 @@
+#thunder-card{
+    width: 352px;
+    height: 597px;
+    background-image: url(./bg/bg1.svg);
+    background-size: cover;
+    display: grid;
+    grid-template-rows: 1fr 20%;
+    grid-template-columns: 1fr;
+    animation: thunderCardBgChange 800ms linear infinite;
+    @apply rounded-2xl  relative justify-end px-8 py-16 overflow-hidden
+}
+
+#thunder-card-body{
+    @apply flex flex-col justify-center items-start gap-2 text-start
+}
+
+#thunder-card-title{
+    @apply text-[#C5CDE3] text-sm font-semibold
+}
+#thunder-card-text{
+    @apply text-[#C5CDE3] text-xs font-light
+}
+
+@keyframes thunderCardBgChange {
+    0%, 16.66% { background-image: url(./bg/bg1.svg); opacity: 1; }
+    16.67%, 33.33% { background-image: url(./bg/bg2.svg); opacity: 1; }
+    33.34%, 50% { background-image: url(./bg/bg3.svg); opacity: 1; }
+    50.01%, 66.66% { background-image: url(./bg/bg4.svg); opacity: 1; }
+    66.67%, 83.33% { background-image: url(./bg/bg5.svg); opacity: 1; }
+    83.34%, 100% { background-image: url(./bg/bg6.svg); opacity: 1; }
+}

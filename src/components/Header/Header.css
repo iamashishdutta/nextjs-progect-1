@@ -1,0 +1,107 @@
+.main-header {
+    @apply border border-[#FFFFFF1A] h-20 w-full rounded-2xl bg-[#5C60691A]
+    grid grid-cols-3 
+    px-6
+    w-[82vw] 
+}
+
+.main-header .lhs, .main-header .center, .main-header .rhs {
+    @apply flex justify-center
+}
+.main-header .lhs {
+    @apply justify-start
+}
+.main-header .center {
+    @apply justify-center
+}
+.main-header .rhs {
+    @apply justify-end gap-4 items-center
+
+}
+
+
+#main-nav {
+    @apply flex w-full justify-center items-center text-sm
+
+}
+
+.parent-ul {
+    @apply flex  w-full justify-center items-center gap-6
+}
+
+#main-nav li{
+    @apply flex justify-center items-center relative
+}
+#main-nav li a{ 
+    @apply flex justify-center items-center text-nowrap
+}
+
+.child-ul {
+    @apply absolute top-12 right-0
+    bg-[#5C60691A] text-sm
+    text-white
+    rounded-2xl p-7 
+     flex-col gap-4
+    hidden
+}
+
+
+
+.parent-li:hover .child-ul {
+    @apply flex
+}
+
+
+.login-btn {
+    @apply flex justify-center items-center 
+    border border-[#7687B5]
+    w-3/12 h-10
+    rounded-3xl relative
+}
+.login-btn::after {
+    content: ' ';
+    background-image: url('./login-circle.png');
+    background-size: cover;
+    /* background-color: #fff; */
+    @apply absolute w-full h-4/6 bottom-0
+}
+.schedule-btn {
+    @apply flex justify-center items-center 
+    border border-[#7687B5]
+    bg-[#7687B547]
+    w-6/12 h-10
+    rounded-3xl relative
+}
+.schedule-btn::after {
+    content: ' ';
+    background-image: url('./login-circle.png');
+    background-size: cover;
+    /* background-color: #fff; */
+    @apply absolute w-full h-4/6 bottom-0
+}
+#menu-btn {
+    @apply hidden
+}
+#menu-btn svg {
+    @apply w-6 h-6
+}
+
+
+
+@media screen and (max-width: 1280px) {
+    .main-header {
+        @apply w-11/12 flex justify-between items-center p-2 
+    }
+
+    .main-header .center, .main-header .rhs {
+        @apply hidden
+    }
+
+    .main-header .lhs {
+        @apply flex justify-between items-center w-full h-full px-4
+    }
+
+    #menu-btn {
+        @apply flex w-8 h-8 
+    }
+}

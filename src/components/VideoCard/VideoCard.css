@@ -1,0 +1,29 @@
+#video-card {
+    animation: bgChange 1s linear infinite;
+    width: 970px;
+    height: 582px;
+    @apply flex justify-center items-center
+}
+@keyframes bgChange {
+    0% {
+        background-image: url(./vid1.svg);
+    }
+    25% {
+        background-image: url(./vid2.svg);
+    }
+    50% {
+        background-image: url(./vid3.svg);
+    }
+    75% {
+        background-image: url(./vid4.svg);
+    }
+    100% {
+        background-image: url(./vid1.svg);
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    #video-card {
+        @apply scale-50
+    }
+}

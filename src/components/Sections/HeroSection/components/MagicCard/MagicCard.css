@@ -1,0 +1,33 @@
+#MagicCard {
+    background: #1c2024b0;
+    @apply border-[#ffffff1f] border rounded-xl flex justify-center items-center h-11 w-96 gap-2
+    relative overflow-hidden py-2
+}
+
+#MagicCard p {
+    @apply text-white text-xs font-medium uppercase
+}
+
+#MagicCard img {
+    @apply w-6 h-6
+}
+
+#MagicCard::after {
+    content: ' ';
+    width: 20px;
+    
+    background: #ececec15;
+    animation: slideEffect 4s  linear ;
+    left: -20px;
+    @apply absolute top-0 h-full -skew-x-12
+}
+
+@keyframes slideEffect {
+    0% {
+        left: -20px;
+    }
+
+    100% {
+        left: 100%;
+    }   
+}
